@@ -1,0 +1,130 @@
+.features-section {
+  padding: 5rem 2vw;
+  background: var(--background);
+}
+.features-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  color: var(--primary);
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+}
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: none;
+  border: none;
+  background: var(--card-bg);
+  color: var(--primary);
+  position: relative;
+  transition: transform 0.15s;
+  text-align: left;
+}
+.feature-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+.feature-green {
+  background: var(--accent-green);
+  color: var(--primary);
+}
+.feature-black {
+  background: #111;
+  color: #fff;
+}
+.feature-purple {
+  background: var(--accent-purple);
+  color: var(--primary);
+}
+.feature-yellow {
+  background: var(--accent-yellow);
+  color: var(--primary);
+}
+.feature-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.feature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+.feature-card p {
+  color: inherit;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+.feature-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.feature-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.feature-meta {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 0.2rem;
+}
+.feature-arrow-btn {
+  background: rgba(0,0,0,0.12);
+  border: none;
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.feature-green .feature-arrow-btn {
+  background: #fff;
+  color: var(--primary);
+}
+.feature-black .feature-arrow-btn {
+  background: #222;
+  color: #fff;
+}
+.feature-purple .feature-arrow-btn {
+  background: #fff;
+  color: var(--primary);
+}
+.feature-yellow .feature-arrow-btn {
+  background: #fff;
+  color: var(--primary);
+}
+.feature-arrow-btn:hover {
+  background: var(--accent-blue);
+  color: #fff;
+} 
+
+@media (min-width: 1024px) {
+  .features-section {
+    padding: 5rem 10vw;
+  }
+  .features-section h2 {
+    font-size: 4rem;
+  }
+}

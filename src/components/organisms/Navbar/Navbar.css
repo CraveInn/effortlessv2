@@ -1,0 +1,200 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3vw 2rem 3vw;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0;
+  letter-spacing: -1px;
+}
+.tagline {
+  font-size: 1rem;
+  color: var(--secondary);
+  margin-top: 0.25rem;
+}
+.auth-buttons {
+  display: flex;
+  gap: 1.25rem;
+}
+.login-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius);
+  transition: background 0.15s;
+}
+.login-btn:hover {
+  background: var(--card-bg);
+}
+.get-started-btn {
+  background: var(--accent-green);
+  color: var(--primary);
+  border: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s;
+}
+.get-started-btn:hover {
+  background: var(--accent-blue);
+  color: #fff;
+}
+.nav-links-desktop {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-link {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.08rem;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius);
+  transition: background 0.15s, color 0.15s;
+}
+.nav-link:hover {
+  background: var(--card-bg);
+  color: var(--accent-purple);
+}
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+@media (max-width: 900px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 40, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  animation: fadeInMenu 0.25s ease;
+}
+@keyframes fadeInMenu {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.mobile-menu {
+  background: #fff;
+  width: 80vw;
+  max-width: 340px;
+  height: 100vh;
+  box-shadow: -2px 0 16px 0 rgba(0,0,0,0.12);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2.5rem;
+  position: relative;
+  animation: fadeInMenu 0.25s ease;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+.mobile-menu .nav-link {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.1rem;
+  font-size: 1.15rem;
+  color: var(--primary);
+  background: none;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 0.5rem;
+}
+.mobile-menu .nav-link:hover {
+  background: var(--card-bg);
+  color: var(--accent-purple);
+}
+.mobile-cta {
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 0.9rem 0;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 1.08rem;
+  font-weight: 700;
+  background: var(--accent-purple);
+  color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.mobile-cta.primary {
+  background: var(--accent-green);
+  color: var(--primary);
+  margin-top: 0.7rem;
+}
+.mobile-cta:hover {
+  background: var(--accent-yellow);
+  color: #18151c;
+}
+@media (max-width: 600px) {
+  .navbar {
+    padding: 2rem;
+  }
+  .mobile-menu-overlay {
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-menu {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: none;
+  }
+  .mobile-menu .nav-link,
+  .mobile-cta {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    width: 80vw;
+    max-width: 320px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+} 

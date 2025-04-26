@@ -1,0 +1,69 @@
+.how-it-works {
+  padding: 4.5rem 2vw;
+  background: var(--background);
+  text-align: center;
+}
+.how-it-works h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3.5rem;
+  color: var(--primary);
+}
+.steps-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto;
+}
+.step-block {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+  max-width: 260px;
+  margin: 0 1rem;
+}
+.step-circle {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+}
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+.step-desc {
+  color: var(--secondary);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+.step-dots {
+  flex: 0 0 60px;
+  align-self: center;
+  height: 2px;
+  border-bottom: 2px dotted #bbb;
+  margin: 0 0.5rem 0 0.5rem;
+  width: 60px;
+} 
+
+@media (min-width: 1024px) {
+  .how-it-works h2 {
+    font-size: 4rem;
+  }
+}

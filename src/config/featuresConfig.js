@@ -1,0 +1,43 @@
+export const featuresConfig = [
+  {
+    label: 'INSTANT',
+    title: 'Instant Updates',
+    description: 'Edit the sheet, and your live website updates automatically. No deployments needed!',
+    meta: 'Update Speed',
+    value: 'Real-Time',
+    color: 'green',
+    textColor: '#222',
+    button: 'See more',
+  },
+  {
+    label: 'NO CODE',
+    title: 'No Coding Required',
+    description: 'Manage your entire site content without touching a single line of code.',
+    meta: 'Skill Needed',
+    value: 'Zero',
+    color: 'black',
+    textColor: '#fff',
+    button: 'See more',
+  },
+  {
+    label: 'SPEED',
+    title: 'Blazing Fast Hosting',
+    description: 'Hosted on ultra-fast servers (like Vercel, Netlify, or GitHub Pages).',
+    meta: 'Load Time',
+    value: '~1s',
+    color: 'purple',
+    textColor: '#222',
+    button: 'See more',
+  },
+  {
+    label: 'DESIGN',
+    title: 'Custom Designs',
+    description: 'Beautiful templates tailored to your brand.',
+    meta: 'Templates',
+    value: '100+',
+    color: 'yellow',
+    textColor: '#222',
+    button: 'See more',
+  },
+  
+]; 
