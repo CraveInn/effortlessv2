@@ -10,7 +10,7 @@ const Footer = () => (
         <a href="#contact">Contact</a>
       </div>
       <div className="footer-right">
-        <p>© 2024 SheetSite. All rights reserved.</p>
+        <p>© 2024 Effortless. All rights reserved.</p>
       </div>
     </div>
   </footer>
