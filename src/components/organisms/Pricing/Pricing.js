@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Pricing.css';
+import ProjectModal from '../../molecules/ProjectModal/ProjectModal';
 
 const plans = [
   {
@@ -57,6 +58,7 @@ const plans = [
 
 const Pricing = () => {
   const [annual, setAnnual] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="pricing-section-modern" id="pricing">
       <h2 className="pricing-title">Our Packages</h2>
@@ -86,10 +88,14 @@ const Pricing = () => {
                 <li key={i}><span className="feature-check">✔</span> {f}</li>
               ))}
             </ul>
-            <button className="plan-btn">{plan.button}</button>
+            <button className="plan-btn" onClick={() => setIsModalOpen(true)}>{plan.button}</button>
           </div>
         ))}
       </div>
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };

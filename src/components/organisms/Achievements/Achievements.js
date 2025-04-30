@@ -3,7 +3,7 @@ import './Achievements.css';
 
 const Achievements = () => {
   return (
-    <section className="achievements-section">
+    <section className="achievements-section" id="highlights">
       <div className="achievements-container">
         <div className="achievements-title">
           <h2>Effortless<br />at a Glance</h2>

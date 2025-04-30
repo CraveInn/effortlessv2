@@ -9,7 +9,6 @@ const navLinks = [
   { label: 'Highlights', to: 'highlights' },
   { label: 'Pricing', to: 'pricing' },
   { label: 'Reviews', to: 'reviews' },
-  { label: 'Contact', to: 'contact' },
 ];
 
 const Navbar = () => {
@@ -78,8 +77,6 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <button className="mobile-cta" onClick={() => handleNavigation('contact')}>Contact Us</button>
-            <button className="mobile-cta primary" onClick={() => handleNavigation('pricing')}>Get Started 🚀</button>
           </div>
         </div>
       )}

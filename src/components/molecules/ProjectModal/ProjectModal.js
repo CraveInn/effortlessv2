@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaTimes, FaPhone, FaCheckCircle } from 'react-icons/fa';
 import './ProjectModal.css';
 
-const ProjectModal = ({ isOpen, onClose, onConfirm }) => {
+const ProjectModal = ({ isOpen, onClose, onConfirm = () => {} }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');

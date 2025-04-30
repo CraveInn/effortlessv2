@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ProStocks.css';
+import ProjectModal from '../../molecules/ProjectModal/ProjectModal';
 const cards = [
   {
     title: 'Basic Website Setup (5-7 sections)',
@@ -100,7 +101,7 @@ const ProStocks = () => {
   const [search, setSearch] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
   const [filteredCards, setFilteredCards] = useState([]);
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleSearch = () => {
     if (!search.trim()) 
       {
@@ -157,20 +158,24 @@ const ProStocks = () => {
                       {/* <span className="prostocks-visa">VISA</span> */}
                     </div>
                     <div className="prostocks-card-title">{card.title}</div>
-                    <button className="prostocks-order-btn">Order Now</button>
+                    <button className="prostocks-order-btn" onClick={() => setIsModalOpen(true)}>Enquire Now</button>
                   </div>
                 ))
               ) : (
                 <div className="no-results">
                   <p>No results found for "{search}"</p>
                   <p className="callback-text">Can't find what you're looking for? Let us help you!</p>
-                  <button className="callback-btn">Request a Callback</button>
+                  <button className="callback-btn" onClick={() => setIsModalOpen(true)}>Request a Callback</button>
                 </div>
               )}
             </div>
           )}
         </div>
       </section>
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };

@@ -6,7 +6,7 @@ const categories = [
 ];
 
 const Highlights = () => (
-  <section className="highlights-section" id="highlights">
+  <section className="highlights-section" >
     <div className="highlights-title"><h2 >Our Achievements</h2></div>
     <div>
     <div className="highlights-grid">
