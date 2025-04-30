@@ -13,16 +13,21 @@ import Footer from '../components/organisms/Footer/Footer';
 import Scene1Sheet from '../components/organisms/Scenes/Scene1Sheet';
 import Scene2Website from '../components/organisms/Scenes/Scene2Website';
 import Scene3Tagline from '../components/organisms/Scenes/Scene3Tagline';
+import Integrations from '../components/organisms/Integrations/Integrations';
+import ThreeColumnSection from '../components/organisms/ThreeColumnSection/ThreeColumnSection';
 
 function Home() {
   return (
     <div className="home">
       <Navbar />
       <Hero />
+      <ThreeColumnSection />
+      {/* <Integrations /> */}
       <Features />
       <ProStocks />
       <Highlights />
       <HowItWorks />
+      
       {/* <div id="animated-demo-section" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32, margin: '48px 0' }}>
         <Scene1Sheet />
         <Scene2Website />
