@@ -3,60 +3,61 @@ import './Reviews.css';
 
 const reviews = [
   {
-    name: 'Matt Johnson',
-    role: 'Head of Support | Relume',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    text: 'What I love about this is it allows anyone to add a touch of delight to any project - regardless of budget and without a lot of effort – so easy!'
+    name: 'Rohit Mehra',
+    role: 'Founder | DigitGrow Solutions',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'The basic website setup was smooth and super professional. Got my site live within a week, and it looks just amazing for the price!'
   },
   {
-    name: 'Josh Loh',
-    role: 'Webflow Livestream Host, Senior Community Advocate',
-    avatar: 'https://randomuser.me/api/portraits/men/33.jpg',
-    text: 'Get your micro delights here 👇 Also – beautiful one page design 👌'
+    name: 'Sneha Verma',
+    role: 'Marketing Manager | ShopNow India',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'Their e-commerce sheet integration helped us showcase over 100 products without any hassle. Simple and effective!'
   },
   {
-    name: 'Waldo',
-    role: 'CEO & Co-Founder @webprintsapp',
-    avatar: 'https://randomuser.me/api/portraits/men/34.jpg',
-    text: 'I immediately purchased the lifetime access earlier, brilliant work. Congratulations on the launch!! ✨🚀'
+    name: 'Amitabh Rao',
+    role: 'Director | TechHive Pvt Ltd',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'Loved the custom branding! Our new logo and color palette gave our startup a professional touch. Worth every rupee.'
   },
   {
-    name: 'Vimalan',
-    role: 'Founder @videsigns.uk — Webflow Agency',
-    avatar: 'https://randomuser.me/api/portraits/men/35.jpg',
-    text: 'Super proud of you Hafiz!! Great product, great site 🔥 Grabbed a lifetime plan for myself. 💪🎉'
+    name: 'Priya Nair',
+    role: 'Social Media Lead | Witty Threads',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'Their 15 posts per month social media plan is a blessing. Fresh content every week without me worrying about it.'
   },
   {
-    name: 'Josiah Dueñes',
-    role: 'Webflow Expert',
-    avatar: 'https://randomuser.me/api/portraits/men/36.jpg',
-    text: 'This is an awesome tool I have been using and already the addition of the button collections is a big value add. Really clean animations that can help you get your development speed up in @webflow. Great job!'
+    name: 'Nikhil Shah',
+    role: 'Co-founder | EasyFundz',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'From payment integration to SEO – everything was handled with precision. My traffic shot up within the first month!'
   },
   {
-    name: 'Ailín Tobin',
-    role: "Ireland's 1st Webflow Expert",
-    avatar: 'https://randomuser.me/api/portraits/men/37.jpg',
-    text: "Well done! I'm adding this to my @webflow arsenal 👌"
+    name: 'Ritika Chawla',
+    role: 'Design Head | CraftsyKart',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'They made a custom-designed site that matched exactly what we had in mind. Their UI/UX work is spot on.'
   },
   {
-    name: 'Félix Meens',
-    role: 'Founder of Webflix Studio',
-    avatar: 'https://randomuser.me/api/portraits/men/38.jpg',
-    text: 'Adding microinteractions by @itshkmanzoor to my webflow libraries was a game changer.'
+    name: 'Harshil Patel',
+    role: 'Growth Manager | UrbanBloom',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'Targeted ads for specific client groups really helped our conversions. Clear ROI improvement within days!'
   },
   {
-    name: 'Attila Vaszka',
-    role: 'Webflow Developer & Designer',
-    avatar: 'https://randomuser.me/api/portraits/men/39.jpg',
-    text: 'Great product, great support, and a fantastic community!'
+    name: 'Ananya Desai',
+    role: 'Owner | Ananya’s Kitchen',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'Monthly maintenance is a lifesaver! My site stays updated and secure without me lifting a finger.'
   },
   {
-    name: 'Samuel Uebersax',
-    role: 'Professional Webflow Expert',
-    avatar: 'https://randomuser.me/api/portraits/men/40.jpg',
-    text: 'Adding microinteractions by @itshkmanzoor to my webflow libraries was a game changer.'
+    name: 'Arjun Sethi',
+    role: 'Digital Strategist | Sethi Media Works',
+    avatar: 'https://i.pinimg.com/736x/a9/ec/1e/a9ec1e2e621a704be5c05b0cb8602579.jpg',
+    text: 'Their bundle pricing made it super affordable to get everything – site, SEO, forms, and social. Full paisa vasool!'
   }
 ];
+
 
 const Reviews = () => (
   <section className="reviews-section" id="reviews">
