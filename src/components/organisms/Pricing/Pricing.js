@@ -59,15 +59,15 @@ const Pricing = () => {
   const [annual, setAnnual] = useState(false);
   return (
     <section className="pricing-section-modern" id="pricing">
-      <h2 className="pricing-title">Pricing plans</h2>
-      <p className="pricing-desc">Effortless features that will help your company scale faster</p>
-      <div className="pricing-toggle-row">
+      <h2 className="pricing-title">Our Packages</h2>
+      <p className="pricing-desc">Customized packages based on your needs</p>
+      {/* <div className="pricing-toggle-row">
         <span className={!annual ? 'toggle-label active' : 'toggle-label'}>Bill Monthly</span>
         <div className="toggle-switch" onClick={() => setAnnual(a => !a)}>
           <div className={annual ? 'toggle-knob annual' : 'toggle-knob'}></div>
         </div>
         <span className={annual ? 'toggle-label active' : 'toggle-label'}>Bill Annually <span className="toggle-discount">(10% off)</span></span>
-      </div>
+      </div> */}
       <div className="pricing-cards-modern">
         {plans.map((plan, idx) => (
           <div
@@ -77,10 +77,10 @@ const Pricing = () => {
           >
             <div className="plan-icon" aria-hidden>{plan.icon}</div>
             <div className="plan-name">{plan.name}</div>
-            <div className="plan-price">
+            {/* <div className="plan-price">
               ${annual ? (plan.price * 12 * 0.9).toLocaleString() : plan.price.toLocaleString()}
               <span className="plan-price-unit">/mo</span>
-            </div>
+            </div> */}
             <ul className="plan-features">
               {plan.features.map((f, i) => (
                 <li key={i}><span className="feature-check">✔</span> {f}</li>

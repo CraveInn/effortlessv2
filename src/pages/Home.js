@@ -29,7 +29,7 @@ function Home() {
       <ProStocks />
       <Achievements />
       
-      <Highlights />
+      {/* <Highlights /> */}
       
       
       {/* <div id="animated-demo-section" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32, margin: '48px 0' }}>
