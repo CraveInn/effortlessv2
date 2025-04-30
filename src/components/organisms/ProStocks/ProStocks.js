@@ -1,101 +1,176 @@
 import React, { useState } from 'react';
 import './ProStocks.css';
-
-const categories = ['Art', 'Nature', 'Abstract'];
-const tabs = ['Latest', 'Popular', 'Premium'];
 const cards = [
   {
-    title: 'Hypocritical Face',
+    title: 'Basic Website Setup (5-7 sections)',
     img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
-    badge: 'Art',
+    badge: 'Core',
   },
   {
-    title: 'Monster Gravity',
+    title: 'Custom Logo and Brand Palatte',
     img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
-    badge: 'Premium',
+    badge: 'Core',
   },
   {
-    title: 'Hypocritical Face',
+    title: 'Custom Design (Tailored UI/UX)',
     img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
-    badge: 'Abstract',
+    badge: 'Core',
   },
-    {
-    title: 'Hypocritical Face',
+  {
+    title: 'Sheet Integration for Website Content',
     img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
-    badge: 'Art',
+    badge: 'Core',
   },
   {
-    title: 'Monster Gravity',
+    title: 'E-commerce Product Showcase (from Sheet)',
     img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
-    badge: 'Premium',
+    badge: 'Core',
   },
   {
-    title: 'Hypocritical Face',
+    title: 'Payment Integration (via Stripe/PayU)',
     img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
-    badge: 'Abstract',
+    badge: 'Core',
   },
-    {
-    title: 'Hypocritical Face',
+  {
+    title: 'Multiple Sheets Support (for big sites)',
     img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
-    badge: 'Art',
+    badge: 'Core',
   },
   {
-    title: 'Monster Gravity',
+    title: 'SEO Optimization (metadata, OG tags)',
     img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
-    badge: 'Premium',
+    badge: 'Core',
   },
   {
-    title: 'Hypocritical Face',
+    title: 'Website Traffic Analysis',
     img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
-    badge: 'Abstract',
+    badge: 'Core',
   },
-];
+  {
+    title: 'Custom Domain',
+    img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+    badge: 'Core',
+  },
+  {
+    title: 'Social Media : 15 post/month',
+    img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+    badge: 'Core',
+  },
+  {
+    title: 'Meta Ads / month',
+    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+    badge: 'Core',
+  },
+  {
+    title: 'Targeted Ads/ client',
+    img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+    badge: 'Core',
+  },
+  {
+    title: 'Additional Page',
+    img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+    badge: 'Add-On',
+  },
+  {
+    title: 'Form',
+    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+    badge: 'Add-On',
+  },
+  {
+    title: 'Form integration with sheet',
+    img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+    badge: 'Add-On',
+  },
+  {
+    title: 'Monthly Maintenance (optional)',
+    img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+    badge: 'Recurring',
+  },
+  {
+    title: 'Priority Support',
+    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+    badge: 'Recurring',
+  }
+]
+;
 
 const ProStocks = () => {
   const [selectedTab, setSelectedTab] = useState('Latest');
   const [selectedCategory, setSelectedCategory] = useState('Art');
   const [search, setSearch] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
+  const [filteredCards, setFilteredCards] = useState([]);
+
+  const handleSearch = () => {
+    if (!search.trim()) 
+      {
+        setFilteredCards(cards);
+        setHasSearched(true); 
+        return;
+      };
+    
+    const searchResults = cards.filter(card => 
+      card.title.toLowerCase().includes(search.toLowerCase()) ||
+      card.badge.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredCards(searchResults);
+    setHasSearched(true);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <div className="prostocks-outer-container">
-    <section className="prostocks-section" id="prostocks">
-      <div className="prostocks-container">
-        <h2 className="prostocks-title">POPULAR PRO STOCKS</h2>
-        <p className="prostocks-subtitle">Choose a design according to your preferred category then order as soon as possible.</p>
-        <div className="prostocks-controls">
-          <select className="prostocks-select" value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
-            {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-          </select>
-          <input className="prostocks-search" type="text" placeholder="Search design" value={search} onChange={e => setSearch(e.target.value)} />
-          <button className="prostocks-search-btn" aria-label="Search">🔍</button>
-        </div>
-        <div className="prostocks-tabs">
-          {tabs.map(tab => (
-            <button
-              key={tab}
-              className={`prostocks-tab${selectedTab === tab ? ' active' : ''}`}
-              onClick={() => setSelectedTab(tab)}
+      <section className="prostocks-section" id="prostocks">
+        <div className="prostocks-container">
+          <h2 className="prostocks-title">Have a specific requirement?</h2>
+          <p className="prostocks-subtitle">Search for specific requirements and get the best results.</p>
+          <div className="prostocks-controls">
+            <input 
+              className="prostocks-search" 
+              type="text" 
+              placeholder="Search design" 
+              value={search} 
+              onChange={e => setSearch(e.target.value)}
+              onKeyPress={handleKeyPress}
+            />
+            <button 
+              className="prostocks-search-btn" 
+              aria-label="Search"
+              onClick={handleSearch}
             >
-              {tab}
+              🔍
             </button>
-          ))}
-        </div>
-        <div className="prostocks-cards">
-          {cards.map((card, idx) => (
-            <div className="prostocks-card" key={idx}>
-              <div className="prostocks-card-img-wrap">
-                <img src={card.img} alt={card.title} className="prostocks-card-img" />
-                <span className="prostocks-badge">{card.badge}</span>
-                <span className="prostocks-visa">VISA</span>
-              </div>
-              <div className="prostocks-card-title">{card.title}</div>
-              <button className="prostocks-order-btn">Order Now</button>
+          </div>
+          {hasSearched && (
+            <div className="prostocks-cards">
+              {filteredCards.length > 0 ? (
+                filteredCards.map((card, idx) => (
+                  <div className="prostocks-card" key={idx}>
+                    <div className="prostocks-card-img-wrap">
+                      <img src={card.img} alt={card.title} className="prostocks-card-img" />
+                      <span className="prostocks-badge">{card.badge}</span>
+                      {/* <span className="prostocks-visa">VISA</span> */}
+                    </div>
+                    <div className="prostocks-card-title">{card.title}</div>
+                    <button className="prostocks-order-btn">Order Now</button>
+                  </div>
+                ))
+              ) : (
+                <div className="no-results">
+                  <p>No results found for "{search}"</p>
+                  <p className="callback-text">Can't find what you're looking for? Let us help you!</p>
+                  <button className="callback-btn">Request a Callback</button>
+                </div>
+              )}
             </div>
-          ))}
+          )}
         </div>
-        <button className="prostocks-next-btn">Next Page →</button>
-      </div>
-    </section>
+      </section>
     </div>
   );
 };

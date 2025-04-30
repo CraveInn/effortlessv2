@@ -1,20 +1,20 @@
 .prostocks-outer-container
 {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   width: 100vw;
 }
 
 @media (max-width: 900px) {
   .prostocks-outer-container {
-    padding: 0 0.5rem;
+    /* padding: 0 0.5rem; */
   }
 }
 
 .prostocks-section {
   background: #181b22;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   margin: 3rem auto;
-  padding: 2.5rem 2rem 2.5rem 2rem;
+  padding: 4rem 3rem;
   box-shadow: 0 4px 32px 0 rgba(24,21,28,0.10);
 }
 .prostocks-container {
@@ -25,16 +25,20 @@
 }
 .prostocks-title {
   color: #fff;
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 1.2;
 }
 .prostocks-subtitle {
   color: #bdbdbd;
-  font-size: 1.08rem;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
   text-align: center;
+  max-width: 600px;
+  line-height: 1.5;
 }
 .prostocks-controls {
   display: flex;
@@ -42,7 +46,7 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 }
 .prostocks-select {
   padding: 0.6rem 1.2rem;
@@ -54,10 +58,10 @@
 }
 .prostocks-search {
   flex: 1;
-  padding: 0.6rem 1.2rem;
+  padding: 1rem 1.5rem;
   border-radius: 2rem;
   border: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   background: #23242a;
   color: #fff;
 }
@@ -66,14 +70,18 @@
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 2.2rem;
-  height: 2.2rem;
-  font-size: 1.1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   margin-left: 0.2rem;
+  transition: background 0.2s ease;
+}
+.prostocks-search-btn:hover {
+  background: #2a2b33;
 }
 .prostocks-tabs {
   display: flex;
@@ -190,10 +198,40 @@
   background: #a78bfa;
   color: #fff;
 }
+@media (max-width: 1200px) {
+  .prostocks-title {
+    font-size: 3rem;
+  }
+  
+  .prostocks-subtitle {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 900px) {
+  .prostocks-outer-container {
+    /* padding: 0 1rem; */
+  }
   .prostocks-section {
-    padding: 1.2rem 0.2rem 1.2rem 0.2rem;
-    max-width: 100vw;
+    padding: 3rem 2rem;
+    /* border-radius: 1.5rem; */
+  }
+  .prostocks-title {
+    font-size: 2.5rem;
+  }
+  .prostocks-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  .prostocks-controls {
+    max-width: 100%;
+  }
+  .prostocks-search {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+  .prostocks-search-btn {
+    width: 2.75rem;
+    height: 2.75rem;
   }
   .prostocks-cards {
     gap: 1rem;
@@ -202,5 +240,81 @@
     width: 100%;
     min-width: 180px;
     max-width: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .prostocks-section {
+    padding: 2rem 1rem;
+    margin: 1.5rem auto;
+    /* border-radius: 1.25rem; */
+  }
+  .prostocks-title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prostocks-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .prostocks-search {
+    padding: 0.75rem 1rem;
+  }
+  .prostocks-search-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.no-results {
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.no-results p {
+  margin: 0;
+}
+
+.callback-text {
+  color: #bdbdbd;
+  font-size: 1rem;
+}
+
+.callback-btn {
+  background: var(--accent-green);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.callback-btn:hover {
+  background: #10b981;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+@media (max-width: 600px) {
+  .no-results {
+    padding: 2rem 1rem;
+  }
+
+  .callback-btn {
+    width: 100%;
+    max-width: 280px;
   }
 } 
