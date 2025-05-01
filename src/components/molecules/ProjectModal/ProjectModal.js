@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaTimes, FaPhone, FaCheckCircle } from 'react-icons/fa';
 import './ProjectModal.css';
+import logEvent from '../../organisms/Logging/Logging';
 
 const ProjectModal = ({ isOpen, onClose, onConfirm = () => {} }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (isOpen) {
+      logEvent(null, 'modal_open');
+    }
+  }, [isOpen]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +25,7 @@ const ProjectModal = ({ isOpen, onClose, onConfirm = () => {} }) => {
     }
 
     // First set submitted state to show success message
+    logEvent(phoneNumber, 'form_submission');
     setIsSubmitted(true);
     // Then call onConfirm with the phone number
   };
