@@ -16,6 +16,7 @@ import Scene3Tagline from '../components/organisms/Scenes/Scene3Tagline';
 import Integrations from '../components/organisms/Integrations/Integrations';
 import ThreeColumnSection from '../components/organisms/ThreeColumnSection/ThreeColumnSection';
 import Achievements from '../components/organisms/Achievements/Achievements';
+import logo from '../Assets/logo.svg';
 
 function Home() {
   return (

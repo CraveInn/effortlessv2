@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
+import logo from '../../../Assets/logo.svg';
 const navLinks = [
   { label: 'Home', to: 'home' },
   { label: 'Features', to: 'features' },
@@ -69,6 +69,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo" onClick={handleLogoClick}>
+        <img src={logo} alt="Effortless" width={40}/>
         <h1>Effortless</h1>
         {/* <span className="tagline">Website Management Made Simple</span> */}
       </div>
