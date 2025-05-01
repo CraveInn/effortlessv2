@@ -9,7 +9,7 @@
       }
       .rotate {
         transform-origin: center;
-        animation: rotate 2s linear;
+        animation: rotate 2s linear infinite;
       }
     </style>
   </defs>
