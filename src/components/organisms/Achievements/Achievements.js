@@ -23,7 +23,7 @@ const Achievements = () => {
           </div>
           <div className="metric-card purple">
             <div className="metric-value">96%</div>
-            <div className="metric-label">Return Rate</div>
+            <div className="metric-label">Repeat Rate</div>
           </div>
         </div>
       </div>
