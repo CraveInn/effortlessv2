@@ -31,12 +31,6 @@ function Home() {
       
       {/* <Highlights /> */}
       
-      
-      {/* <div id="animated-demo-section" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32, margin: '48px 0' }}>
-        <Scene1Sheet />
-        <Scene2Website />
-        <Scene3Tagline />
-      </div> */}
       <Pricing />
       <Reviews />
       {/* <Contact /> */}
